@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name')->unique();
             $table->text('description');
             $table->float('price');
+            $table->integer('qty');
             $table->string('image')->nullable();
             $table->string('slug')->unique();
             $table->foreignId('category_id')->constrained('categories')->onUpdate('cascade')->onDelete('cascade');
